@@ -808,7 +808,7 @@ body {
   position: relative;
   display: flex;
   justify-content: space-between;
-  height: 100vh;
+  height: 500px;
 }
 .quiz__content {
   padding: 40px 50px;
@@ -842,6 +842,11 @@ body {
 }
 .quiz__caption em {
   font-size: 32px;
+}
+@media screen and (max-width: 620px) {
+  .quiz__caption {
+    text-align: center;
+  }
 }
 .quiz__progress {
   display: flex;
@@ -969,6 +974,7 @@ body {
 @media screen and (max-width: 620px) {
   .quiz {
     flex-direction: column;
+    height: 100vh;
   }
 }
 
