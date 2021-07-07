@@ -1,0 +1,70 @@
+.invite {
+    padding-bottom: 135px;
+    &__container {
+        width: 1170px;
+    }
+
+    &__bg {
+        background: url(../img/invite-bg.png) no-repeat;
+        background-position-x: right;
+        padding-bottom: 50px;
+    }
+
+    &__caption {
+        text-align: left;
+    }
+
+    &__text {
+        position: relative;
+        margin-top: 35px;
+        font-style: 33px;
+        font-weight: 700;
+        &::before {
+            content: url(../img/ok.png);
+            position: absolute;
+            left: -45px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__form {
+        position: relative;
+        box-shadow: 0px 0px 25px rgb(219, 219, 219);
+        &::before {
+            content: url(../img/rubik.png);
+            position: absolute;
+            right: -125px;
+            top: -75px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+            width: 95%;
+            height: 10px;
+            border-radius: 0 0 10px 10px;
+            background: #ecbf69;
+        }
+        padding-bottom: 40px;
+    }
+
+    &__form-text {
+        font-size: 30px;
+        text-align: center;
+        padding-top: 45px;
+    }
+
+    &__form-caption {
+        margin-top: 25px;
+    }
+
+    &__elements {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 35px;
+    }
+}
