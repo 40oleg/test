@@ -23,27 +23,15 @@ $('.quiz__item').on('click', function(e) {
     $(this).children('.item__title').children('.item__circle').addClass('item__circle_active');
 });
 
-//заявка
-$('.quiz__send-btn').on('click', function() {
-    alert('Ваша заявка отправлена!');
-    $('.popup-wrapper').addClass('hidden');
-    $('.blackout').addClass('hidden');
-    $('.quiz-wrapper').addClass('hidden');
-})
-
-//обратный звонок
-$('.invite__btn').on('click', function() {
-    alert('Обратный звонок заказан');
-})
-
-$('.popup__btn').on('click', function() {
-    alert('Обратный звонок заказан');
-})
 
 let counter = 1;
 
 function showNextQuestion() {
-    if(counter == 7) return;
+    $('.srcimg').attr('src', $(`#quiz6 .item__circle_active`).parent('.item__title').parent('.quiz__item').children('.item__image').children('img').attr('src'));
+    $('.srctext').text($(`#quiz6 .item__circle_active`).parent('.item__title').children('.item__name').text());
+    if(counter == 7) {
+        return;
+    }
     else counter++;
     $('.quiz').addClass('hidden');
     $(`#quiz${counter}`).removeClass('hidden');

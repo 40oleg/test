@@ -16,14 +16,20 @@
         height: 10px;
         border-radius: 0 0 10px 10px;
         background: #ecbf69;
+        @media screen and (max-width: $phone) {
+            display: none;
+        }
     }
     &::after {
         content: url(../img/bush.png);
         position: absolute;
-        left: 70%;
-        top: 35%;
+        left: 65%;
+        top: 80%;
         transform: translate(-50%, -50%);
         z-index: -2;
+        @media screen and (max-width: $phone) {
+            transform: translate(-50%, -50%) scale(0.9);
+        }
     }
 }
 
@@ -32,11 +38,18 @@
     &__container {
         width: 320px;
         margin-left: auto;
+        @media screen and (max-width: $phone) {
+            margin-right: auto;
+            text-align: center;
+        }
     }
     &__caption {
         text-transform: uppercase;
         text-align: left;
         padding-top: 25px;
+        @media screen and (max-width: $phone) {
+            text-align: center;
+        }
     }
 
     &__text {
@@ -50,16 +63,25 @@
     &__btn {
         margin-top: 10px;
         font-size: 14px;
+        @media screen and (max-width: $phone) {
+            text-align: center;
+            margin: 10px auto;
+        }
     }
 
     &__description {
         margin-top: 10px;
     }
     &::before {
-        content: url(../img/popup-bg.png);;
+        content: url(../img/popup-bg.png);
         position: absolute;
         left: 0;
         top: 0;
         z-index: -1;
+        @media screen and (max-width: $phone) {
+            content: url(../img/mobile-popup-bg.png);
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 }

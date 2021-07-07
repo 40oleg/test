@@ -7,15 +7,27 @@
     z-index: 20;
     background: #fff;
     border-radius: 7px;
+    @media screen and (max-width: $phone) {
+        width: 100vw;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        overflow-y: scroll;
+    }
 }
 
 .quiz {
     position: relative;
     display: flex;
     justify-content: space-between;
+    height: 100vh;
     &__content {
         padding: 40px 50px;
         width: 1000px;
+        @media screen and (max-width: $phone) {
+            width: 100vw;
+            padding: 20px 20px;
+        }
     }
 
     &__text {
@@ -91,16 +103,25 @@
         &::after {
             right: -5px;
         }
+        @media screen and (max-width: $phone) {
+            width: 35px;
+        }
     }
 
     &__items {
         display: flex;
         flex-wrap: wrap;
+        @media screen and (max-width: $phone) {
+            justify-content: space-between;
+        }
     }
 
     &__item {
         margin-left: 25px;
         margin-top: 25px;
+        @media screen and (max-width: $phone) {
+            margin-left: 0;
+        }
     }
 
     &__next-btn {
@@ -118,6 +139,9 @@
         margin-left: 15px;
         .btn__text {
             margin-left: 0;
+        }
+        @media screen and (max-width: $phone) {
+            margin-top: 25px;
         }
     }
 
@@ -152,6 +176,12 @@
         height: 10px;
         background: #dcb262;
         border-radius: 0 0 10px 10px;
+        @media screen and (max-width: $phone) {
+            display: none;
+        }
+    }
+    @media screen and (max-width: $phone) {
+        flex-direction: column;
     }
 }
 
@@ -189,10 +219,16 @@
     &__name {
         margin-left: 5px;
         font-size: 13px;
+        @media screen and (max-width: $phone) {
+            font-size: 10px;
+        }
     }
 
     &__description {
         font-size: 11px;
         text-align: center;
+        @media screen and (max-width: $phone) {
+            font-size: 8px;
+        }
     }
 }
