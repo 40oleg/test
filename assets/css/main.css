@@ -211,9 +211,33 @@ body {
       -ms-transform: rotate(35deg);
           transform: rotate(35deg);
   -webkit-animation: flare-moving 5s infinite ease-in-out;
+  -moz-animation: flare-moving 5s infinite ease-in-out;
+  -o-animation: flare-moving 5s infinite ease-in-out;
           animation: flare-moving 5s infinite ease-in-out;
 }
 @-webkit-keyframes flare-moving {
+  0% {
+    left: -100px;
+  }
+  25% {
+    left: 400px;
+  }
+  100% {
+    left: 400px;
+  }
+}
+@-moz-keyframes flare-moving {
+  0% {
+    left: -100px;
+  }
+  25% {
+    left: 400px;
+  }
+  100% {
+    left: 400px;
+  }
+}
+@-o-keyframes flare-moving {
   0% {
     left: -100px;
   }
